@@ -17,36 +17,36 @@ $ npm install
 
 ## Run with Docker 🐳
 
-Si querés levantar el entorno rápidamente usando Docker, seguí estos pasos:
+If you want to quickly spin up the environment using Docker, follow these steps:
 
-### 1. Build y correr los contenedores
+### 1. Build and run the containers
 
 ```bash
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
-Esto construirá la imagen de la aplicación NestJS y levantará tanto la app como una base de datos MongoDB.
+This will build the NestJS application image and start both the app and a MongoDB database.
 
-### 2. Verificar que esté funcionando
+### 2. Verify everything is running
 
-- Accedé a: [http://localhost:3000](http://localhost:3000)
-- Verificá que los contenedores estén corriendo:
+- Access the app at: [http://localhost:3000](http://localhost:3000)
+- Check that the containers are running:
 
 ```bash
 docker ps
 ```
 
-### 3. Apagar el entorno
+### 3. Stop the environment
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
-> La variable de entorno `MONGO_URI` ya está predefinida en el archivo `docker-compose.yaml`.
+> The `MONGO_URI` environment variable is already defined in the `docker-compose.yaml` file.
 
-### 📂 Archivos necesarios
+### 📂 Required files
 
-Asegurate de tener los siguientes archivos en la raíz del proyecto:
+Make sure you have the following files at the root of the project:
 
 #### `Dockerfile`
 
